@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @manufacturer.title %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= image_tag @manufacturer.logo_url(:thumb).to_s %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @manufacturer.content %>
+</p>
+
+<br />
+
+<%= link_to 'Things', manufacturer_things_path(@manufacturer) %> |
+<%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %> |
+<%= link_to 'Back', manufacturers_path %>
