@@ -1,4 +1,5 @@
 class ManufacturersController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @manufacturers = Manufacturer.order("created_at").page(params[:page]).per(5) #Manufacturer.all

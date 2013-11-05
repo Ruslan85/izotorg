@@ -19,4 +19,6 @@ gem "ckeditor"
 
 gem "kaminari"
 
+gem "devise"
+
 gem 'jquery-rails'

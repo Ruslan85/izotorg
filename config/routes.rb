@@ -1,5 +1,10 @@
 Izotorg::Application.routes.draw do
   
+  devise_for :users
+
+  resources :users
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   root to: 'manufacturers#index'
@@ -8,5 +13,5 @@ Izotorg::Application.routes.draw do
     resources :things
   end
 
- # mount Ckeditor::Engine => "/ckeditor"
+  mount Ckeditor::Engine => "/ckeditor"
 end
