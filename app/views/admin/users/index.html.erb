@@ -1,0 +1,26 @@
+<h1 style="margin-top: 30px;">Пользователи</h1>
+
+<%= paginate @users %>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Имя</th>
+    <th>Email</th>
+    <th>Кнопки управления</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td>
+      <%= link_to 'Show', admin_user_path(user), class: "btn btn-small btn-info" %>
+      <%= link_to 'Edit', edit_admin_user_path(user), class: "btn btn-small btn-warning" %>
+      <%= link_to 'Destroy', admin_user_path(user), class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

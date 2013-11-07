@@ -1,5 +1,6 @@
-class ManufacturersController < ApplicationController
- # before_filter :authenticate_user!, except: [:index, :show]
+class Admin::ManufacturersController < ApplicationController
+
+  layout "admin"
 
   def index
     @manufacturers = Manufacturer.order("created_at").page(params[:page]).per(5) #Manufacturer.all
@@ -21,7 +22,7 @@ class ManufacturersController < ApplicationController
       @manufacturer = Manufacturer.new(params[:manufacturer])
 
       if @manufacturer.save
-        redirect_to @manufacturer, notice: 'Manufacturer was successfully created.' 
+        redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully created.' 
       else
         render action: "new" 
       end
@@ -31,7 +32,7 @@ class ManufacturersController < ApplicationController
       @manufacturer = Manufacturer.find(params[:id])
 
       if @manufacturer.update_attributes(params[:manufacturer])
-        redirect_to @manufacturer, notice: 'Manufacturer was successfully updated.' 
+        redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully updated.' 
       else
         render action: "edit" 
       end
@@ -41,6 +42,6 @@ class ManufacturersController < ApplicationController
     @manufacturer = Manufacturer.find(params[:id])
     @manufacturer.destroy
 
-    redirect_to manufacturers_url 
+    redirect_to admin_manufacturers_url 
   end
 end

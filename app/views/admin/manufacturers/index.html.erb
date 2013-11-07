@@ -1,0 +1,29 @@
+<h1 style="margin-top: 30px;">Производители</h1>
+
+<%= paginate @manufacturers %>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Название</th>
+    <th>Логотип</th>
+    <th>О фирме</th>
+    <th>Кнопки управления</th>   
+  </tr>
+
+<% @manufacturers.each do |manufacturer| %>
+  <tr>
+    <td><%= manufacturer.title %></td>
+    <td><%= image_tag manufacturer.logo_url(:thumb).to_s %></td>
+    <td><%= manufacturer.content %></td>    
+    <td>
+      <%= link_to 'Show', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-info" %>
+      <%= link_to 'Edit', edit_admin_manufacturer_path(manufacturer), class: "btn btn-small btn-warning" %>
+      <%= link_to 'Destroy', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manufacturer', new_admin_manufacturer_path, class: "btn btn-small btn-inverse" %>
