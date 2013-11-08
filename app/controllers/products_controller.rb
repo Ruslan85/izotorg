@@ -22,21 +22,21 @@ class ProductsController < ApplicationController
     @product = @manufacturer.products.create(params[:product])
     if @product.save
       flash[:success] = "Product created!"
-      redirect_to [@manufacturer, @product]   
+      redirect_to [@manufacturer, @product]
     else
-      render action: "new" 
+      render action: "new"
     end
   end
 
   def update
-      @product = @manufacturer.products.find(params[:id])
+    @product = @manufacturer.products.find(params[:id])
 
-      if @product.update_attributes(params[:product])
-        flash[:success] = "Product was successfully updated!"
-        redirect_to [@manufacturer, @product]   
-      else
-        render action: "edit" 
-      end
+    if @product.update_attributes(params[:product])
+      flash[:success] = "Product was successfully updated!"
+      redirect_to [@manufacturer, @product]
+    else
+      render action: "edit"
+    end
   end
 
   def destroy

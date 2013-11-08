@@ -7,7 +7,7 @@
 
 <p>
   <b>Logo:</b><br />
-  <%= image_tag @manufacturer.logo_url(:thumb), class: "thumbnails" %>
+  <%= image_tag @manufacturer.logo_url(:thumb), class: "thumbnail" %>
 </p>
 
 <p>
@@ -17,6 +17,6 @@
 
 <br />
 
-<%= link_to 'Продукты', manufacturer_things_path(@manufacturer), class: "btn btn-small btn-info" %> |
+<%= link_to 'Продукты', admin_products_path(manufacturer_id: @manufacturer.id), class: "btn btn-small btn-info" %> |
 <%= link_to 'Изменение', edit_admin_manufacturer_path(@manufacturer), class: "btn btn-small btn-warning" %> |
 <%= link_to 'Возврат', admin_manufacturers_path, class: "btn btn-small btn-success" %>

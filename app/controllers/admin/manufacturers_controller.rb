@@ -29,13 +29,13 @@ class Admin::ManufacturersController < ApplicationController
   end
 
   def update
-      @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:id])
 
-      if @manufacturer.update_attributes(params[:manufacturer])
-        redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully updated.'
-      else
-        render action: "edit"
-      end
+    if @manufacturer.update_attributes(params[:manufacturer])
+      redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully updated.'
+    else
+      render action: "edit"
+    end
   end
 
   def destroy

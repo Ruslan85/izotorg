@@ -9,9 +9,8 @@ Izotorg::Application.routes.draw do
   get "admin", to: "admin/home#index"
   namespace :admin do
     resources :users
-    resources :manufacturers do
-      resources :products
-    end
+    resources :manufacturers
+    resources :products
   end
 
   resources :users

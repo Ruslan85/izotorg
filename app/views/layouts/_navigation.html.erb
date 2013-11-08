@@ -1,0 +1,24 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      
+      <div class="container nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Панель", admin_path %></li>
+          <li><%= link_to "Производитель", admin_manufacturers_path %></li>
+          <li><%= link_to "Продукция",   admin_products_path %></li>
+          <li><%= link_to "Пользователи", admin_users_path %></li>
+        </ul>
+        
+        <ul class="nav pull-right">
+          <li><%= link_to "Выход", destroy_admin_session_path, method: :delete %></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
