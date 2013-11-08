@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @manufacturer.title %>
+  <b>Title:</b><br />
+  <%= h raw(@manufacturer.title) %>
 </p>
 
 <p>
-  <b>Logo:</b>
-  <%= image_tag @manufacturer.logo_url(:thumb).to_s %>
+  <b>Logo:</b><br />
+  <%= image_tag @manufacturer.logo_url(:thumb), class: "thumbnails" %>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%= @manufacturer.content %>
+  <b>Content:</b><br />
+  <%= h raw(@manufacturer.content) %>
 </p>
 
 <br />
 
-<%= link_to 'Things', manufacturer_things_path(@manufacturer), class: "btn btn-small btn-info" %> |
-<%= link_to 'Edit', edit_admin_manufacturer_path(@manufacturer), class: "btn btn-small btn-warning" %> |
-<%= link_to 'Back', admin_manufacturers_path, class: "btn btn-small btn-success" %>
+<%= link_to 'Продукты', manufacturer_things_path(@manufacturer), class: "btn btn-small btn-info" %> |
+<%= link_to 'Изменение', edit_admin_manufacturer_path(@manufacturer), class: "btn btn-small btn-warning" %> |
+<%= link_to 'Возврат', admin_manufacturers_path, class: "btn btn-small btn-success" %>

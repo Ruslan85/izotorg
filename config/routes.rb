@@ -9,7 +9,9 @@ Izotorg::Application.routes.draw do
   get "admin", to: "admin/home#index"
   namespace :admin do
     resources :users
-    resources :manufacturers
+    resources :manufacturers do
+      resources :products
+    end
   end
 
   resources :users
@@ -19,8 +21,8 @@ Izotorg::Application.routes.draw do
 
   root to: 'users#index'
 
-  resources :manufacturers do
-    resources :things
+  resources :manufacturers, only: [ :index, :show ] do
+    resources :products, only: [ :index, :show ]
   end
 
   mount Ckeditor::Engine => "/ckeditor"

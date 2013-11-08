@@ -16,9 +16,9 @@
     <td><%= image_tag manufacturer.logo_url(:thumb).to_s %></td>
     <td><%= manufacturer.content %></td>    
     <td>
-      <%= link_to 'Show', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-info" %>
-      <%= link_to 'Edit', edit_admin_manufacturer_path(manufacturer), class: "btn btn-small btn-warning" %>
-      <%= link_to 'Destroy', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Обзор', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-info" %>
+      <%= link_to 'Изменение', edit_admin_manufacturer_path(manufacturer), class: "btn btn-small btn-warning" %>
+      <%= link_to 'Удаление', admin_manufacturer_path(manufacturer), class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
     </td>
   </tr>
 <% end %>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Manufacturer', new_admin_manufacturer_path, class: "btn btn-small btn-inverse" %>
+<%= link_to 'Новый', new_admin_manufacturer_path, class: "btn btn-small btn-inverse" %>
