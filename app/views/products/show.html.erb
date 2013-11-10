@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
 
 <p>
   <b>Title:</b>
-  <%= @product.title %>
+  <%= h raw(@product.title) %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <b>Content:</b>
-  <%= @product.content %>
+  <%= h raw(@product.content) %>
 </p>
 
 <p>
@@ -22,5 +22,4 @@
 
 <br />
 
-<%= link_to 'Edit', edit_manufacturer_product_path(@manufacturer.id, @product) %> |
-<%= link_to 'Back', manufacturer_products_path %>
+<%= link_to 'Возврат', manufacturer_products_path, class: "btn btn-mini btn-success" %>

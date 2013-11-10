@@ -1,6 +1,6 @@
-<h1>Editing product</h1>
+ <h1>Редактирование продукта</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@manufacturer, @product] %> |
-<%= link_to 'Back', manufacturer_products_path(@manufacturer) %>
+<%= link_to 'Обзор', [@manufacturer, @product], class: "btn btn-mini btn-info" %> |
+<%= link_to 'Возврат', manufacturer_products_path(@manufacturer), class: "btn btn-mini btn-success" %>

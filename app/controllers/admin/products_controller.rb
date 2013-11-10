@@ -36,14 +36,13 @@ class Admin::ProductsController < ApplicationController
   end
 
   def update
-      @product = Product.find(params[:id])
-
-      if @product.update_attributes(params[:product])
-        flash[:success] = "Product was successfully updated!"
-        redirect_to [:admin, @product]   
-      else
-        render action: "edit" 
-      end
+    @product = Product.find(params[:id])
+    if @product.update_attributes(params[:product])
+      flash[:success] = "Product was successfully updated!"
+      redirect_to [:admin, @product]   
+    else
+      render action: "edit" 
+    end
   end
 
   def destroy

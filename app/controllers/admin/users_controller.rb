@@ -15,13 +15,13 @@ class Admin::UsersController < ApplicationController
   end
 
   def update
-      @user = User.find(params[:id])
+    @user = User.find(params[:id])
 
-      if @user.update_attributes(params[:user])
-        redirect_to admin_user_path(@user), notice: 'User was successfully updated.' 
-      else
-        render action: "edit" 
-      end
+    if @user.update_attributes(params[:user])
+      redirect_to admin_user_path(@user), notice: 'User was successfully updated.' 
+    else
+      render action: "edit" 
+    end
   end
 
   def destroy

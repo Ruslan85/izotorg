@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>Title:</b><br />
   <%= h raw(@product.title) %>
 </p>
 
 <p>
-  <b>Logo:</b>
+  <b>Logo:</b><br />
   <%= image_tag @product.image_url(:thumb).to_s %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>Content:</b><br />
   <%= h raw(@product.content) %>
 </p>
 
 <p>
-  <b>Manufacturer:</b>
+  <b>Manufacturer:</b><br />
   <%= @product.manufacturer.title %>
 </p>
 
 <br />
 
-<%= link_to 'Edit', edit_admin_product_path(@product) %> |
-<%= link_to 'Back', admin_products_path %>
+<%= link_to 'Изменение', edit_admin_product_path(@product), class: "btn btn-mini btn-warning" %> |
+<%= link_to 'Возврат', admin_products_path, class: "btn btn-mini btn-success" %>

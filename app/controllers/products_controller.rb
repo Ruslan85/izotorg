@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
     @product = @manufacturer.products.find(params[:id])
     @product.destroy
 
-    redirect_to manufacturer_products_path(@manufacturer)
+    redirect_to admin_products_path
   end
 
 

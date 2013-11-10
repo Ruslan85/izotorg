@@ -1,28 +1,31 @@
-<h1>Listing products</h1>
+<h1>Продукты</h1>
 
 <%= paginate @products %>
 
 <table class="table table-bordered">
   <tr>
-    <th>Manufacturer</th>
-    <th>Title</th>
-    <th>Image</th>
-    <th>Content</th>    
+    <th>Производитель</th>
+    <th>Название</th>
+    <th>Логотип</th>
+    <th>О продукте</th>
+    <th>Кнопки управления</th>    
   </tr>
 
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.manufacturer_id %></td> 
-    <td><%= h raw(product.title) %></td>
-    <td><%= image_tag product.image_url(:thumb).to_s%></td>     
-    <td><%= h raw(product.content) %></td>
-    <td><%= link_to 'Show', admin_product_path(product) %></td>
-    <td><%= link_to 'Edit', edit_admin_product_url(product) %></td>
-    <td><%= link_to 'Destroy', [:admin, product], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.manufacturer_id %></td> 
+      <td><%= h raw(product.title) %></td>
+      <td><%= image_tag product.image_url(:thumb), class: "thumbnail" %></td>     
+      <td><%= h raw (truncate((product.content), :length => 125, :omission => '...')) %></td>
+      <td>
+        <%= link_to 'Обзор', admin_product_path(product), class: "btn btn-mini btn-info" %>
+        <%= link_to 'Изменение', edit_admin_product_url(product), class: "btn btn-mini btn-warning" %>
+        <%= link_to 'Удаление', admin_product_path(product), class: "btn btn-mini btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Thing', new_admin_product_path %>
+<%= link_to 'Новый Продукт', new_admin_product_path, class: "btn btn-mini btn-inverse" %>

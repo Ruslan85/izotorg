@@ -1,25 +1,23 @@
-<h1>Listing manufacturers</h1>
+<h1 style="margin-top: 30px;">Производители</h1>
 
 <%= paginate @manufacturers %>
 
-<table>
+<table class="table table-striped">
   <tr>
-    <th>Title</th>
-    <th>Logo</th>
-    <th>Content</th>    
-    <th></th>
-    <th></th>
+    <th>Название</th>
+    <th>Логотип</th>
+    <th>О фирме</th>    
+    <th>Подробная информация</th>
   </tr>
 
-<% @manufacturers.each do |manufacturer| %>
-  <tr>
-    <td><%= manufacturer.title %></td>
-    <td><%= image_tag manufacturer.logo_url(:thumb).to_s %></td>
-    <td><%= manufacturer.content %></td>    
-    <td><%= link_to 'Show', manufacturer %></td>
-  </tr>
-<% end %>
+  <% @manufacturers.each do |manufacturer| %>
+    <tr>
+      <td><%= h raw(manufacturer.title) %></td>
+      <td><%= image_tag manufacturer.logo_url(:thumb), class: "thumbnail" %></td>
+      <td><%= h raw (truncate((manufacturer.content), :length => 125, :omission => '...')) %></td>    
+      <td><%= link_to 'Обзор', manufacturer, class: "btn btn-small btn-info" %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
 
