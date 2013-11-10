@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b><br />
+  <b>Производитель:</b><br />
+  <%= @product.manufacturer.title %>
+</p>
+
+<p>
+  <b>Название:</b><br />
   <%= h raw(@product.title) %>
 </p>
 
 <p>
-  <b>Logo:</b><br />
+  <b>Логотип:</b><br />
   <%= image_tag @product.image_url(:thumb).to_s %>
 </p>
 
 <p>
-  <b>Content:</b><br />
+  <b>О продукте:</b><br />
   <%= h raw(@product.content) %>
-</p>
-
-<p>
-  <b>Manufacturer:</b><br />
-  <%= @product.manufacturer.title %>
 </p>
 
 <br />

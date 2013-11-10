@@ -21,18 +21,20 @@ class Admin::ManufacturersController < ApplicationController
   def create
 	@manufacturer = Manufacturer.new(params[:manufacturer])
 
-	if @manufacturer.save
-	  redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully created.'
-	else
-	  render action: "new"
-	end
+  	if @manufacturer.save
+      flash[:success] = "Manufacturer created!"
+  	  redirect_to admin_manufacturer_path(@manufacturer)
+  	else
+  	  render action: "new"
+  	end
   end
 
   def update
     @manufacturer = Manufacturer.find(params[:id])
 
     if @manufacturer.update_attributes(params[:manufacturer])
-      redirect_to admin_manufacturer_path(@manufacturer), notice: 'Manufacturer was successfully updated.'
+      flash[:success] = "Manufacturer was successfully updated!"
+      redirect_to admin_manufacturer_path(@manufacturer)
     else
       render action: "edit"
     end

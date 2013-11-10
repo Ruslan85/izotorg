@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Название:</b>
+  <b>Название:</b><br />
   <%= h raw(@manufacturer.title) %>
 </p>
 <br />
 <p>
-  <b>Логотип:</b>
+  <b>Логотип:</b><br />
   <%= image_tag @manufacturer.logo_url(:thumb), class: "thumbnail" %>
 </p>
 <br />
 <p>
-  <b>О фирме:</b>
+  <b>О фирме:</b><br />
   <%= h raw(@manufacturer.content) %>
 </p>
 <br />

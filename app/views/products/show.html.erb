@@ -1,25 +1,25 @@
- <p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
+
 
 <p>
-  <b>Title:</b>
+  <b>Производитель:</b><br />
+  <%= @product.manufacturer_id %>
+</p>
+<p>
+  <b>Название:</b><br />
   <%= h raw(@product.title) %>
 </p>
 
 <p>
-  <b>Logo:</b>
+  <b>Логотип:</b><br />
   <%= image_tag @product.image_url(:thumb).to_s %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>О продукте:</b><br />
   <%= h raw(@product.content) %>
-</p>
-
-<p>
-  <b>Manufacturer:</b>
-  <%= @product.manufacturer_id %>
 </p>
 
 <br />
 
-<%= link_to 'Возврат', manufacturer_products_path, class: "btn btn-mini btn-success" %>
+<%= link_to 'Возврат', manufacturer_products_path %>

@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   layout "admin"
   
   def index
-    @users = User.order("created_at").page(params[:page]).per(5)# User.all
+    @users = User.order("created_at").page(params[:page]).per(5)
   end
 
   def show
@@ -18,7 +18,8 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update_attributes(params[:user])
-      redirect_to admin_user_path(@user), notice: 'User was successfully updated.' 
+      flash[:success] = "User was successfully updated!"
+      redirect_to admin_user_path(@user) 
     else
       render action: "edit" 
     end

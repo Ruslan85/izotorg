@@ -49,6 +49,6 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to  admin_product_path(@manufacturer)
+    redirect_to  admin_products_path(@manufacturer)
   end
 end

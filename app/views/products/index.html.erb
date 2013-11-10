@@ -2,22 +2,22 @@
 
 <%= paginate @products %>
 
-<table class="table table-bordered">
+<table>
   <tr>
-    <th>Title</th>
-    <th>Image</th>
-    <th>Content</th>    
-    <th>Manufacturer</th>
-    <th></th>
+    <th>Производитель</th>
+    <th>Название</th>
+    <th>Логотип</th>    
+    <th>О продукте</th>        
+    <th>Подробная информация</th>
   </tr>
 
   <% @products.each do |product| %>
     <tr>
-      <td><%= product.title %></td>
-      <td><%= product.image %></td>
-      <td><%= product.manufacturer_id %></td>  
-      <td><%= product.content %></td>
-      <td><%= link_to 'Обзор', manufacturer_product_path(@manufacturer.id, product), class: "btn btn-mini btn-info" %></td>
+      <td><%= product.manufacturer_id %></td> 
+      <td><%= h raw(product.title) %></td>
+      <td><%= image_tag product.image_url(:thumb) %></td> 
+      <td><%= h raw (truncate((product.content), :length => 125, :omission => '...')) %></td>
+      <td><%= link_to 'Обзор', manufacturer_product_path(@manufacturer.id, product) %></td>
     </tr>
   <% end %>
 </table>
