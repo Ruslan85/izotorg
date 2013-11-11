@@ -13,7 +13,7 @@
 
   <% @products.each do |product| %>
     <tr>
-      <td><%= product.manufacturer_id %></td> 
+      <td><%= product.manufacturer.full_title %></td> 
       <td><%= h raw(product.title) %></td>
       <td><%= image_tag product.image_url(:thumb) %></td> 
       <td><%= h raw (truncate((product.content), :length => 125, :omission => '...')) %></td>

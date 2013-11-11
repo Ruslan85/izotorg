@@ -4,4 +4,8 @@ class Manufacturer < ActiveRecord::Base
   has_many :products, dependent: :destroy
 
   mount_uploader :logo, LogoUploader
+
+   def full_title
+  	title
+  end
 end
