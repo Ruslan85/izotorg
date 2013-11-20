@@ -1,6 +1,4 @@
 Izotorg::Application.routes.draw do
-  
-  get "home/index"
 
   devise_for :admins
 
@@ -15,14 +13,17 @@ Izotorg::Application.routes.draw do
 
   resources :users
 
-
-  mount Ckeditor::Engine => '/ckeditor'
-
-  root to: 'users#index'
+  mount Ckeditor::Engine => '/ckeditor'  
 
   resources :manufacturers, only: [ :index, :show ] do
     resources :products, only: [ :index, :show ]
   end
 
-  mount Ckeditor::Engine => "/ckeditor"
+  resource :static_pages, only: [] do
+    ["index", "about", "articles", "partners", "price", "contacts"].each do |static_page|
+      get static_page
+    end
+  end
+
+  root to: 'users#index'
 end
