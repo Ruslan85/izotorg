@@ -1,2 +1,52 @@
-<h1>StaticPages#contacts</h1>
-<p>Find me in app/views/static_pages/contacts.html.erb</p>
+<%= render 'header' %>
+
+<%= render 'quickLinks' %>
+
+</div>
+</div>
+</div>
+
+<div id="container">
+<table id="content" cellpadding="0" cellspacing="0">
+	<tr>
+		<%= render 'left_column' %>
+
+		 <a id="consultant" href="https://siteheart.com/webconsultation/603129?" target="siteheart_sitewindow_603129" onclick="o=window.open;o('https://siteheart.com/webconsultation/603129?', 'siteheart_sitewindow_603129', 'width=550,height=400,top=30,left=30,resizable=yes'); return false;" >On-line   <br /> консультант</a>
+		<a id="feedback" href="/feedback/" >Оформить  <br /> заявку</a>
+
+		<%= render 'infoBlock' %>
+
+		<td class="main-column" style="width:727px;">
+
+		<div id="navigation">
+			<ul class="breadcrumb-navigation">
+				<li><a href="/" title="Главная">Главная</a></li>
+				<li><span>&nbsp;&gt;&nbsp;</span></li>
+				<li><a href="/contacts/" title="Контакты">Контакты</a></li>
+			</ul>
+		</div>
+		<h1 id="pagetitle">Контакты</h1> 
+		<div>Торговая компания &laquo;Лидер&raquo; </div>
+		 Юридический адрес: г. Казань, Мартына Межлаука, 22 
+		<br />
+		 Фактический адрес: г. Казань, Кулагина, 13 
+		<br />
+		 Телефон: 226-10-40, 226-10-50 
+		<br />
+		 E-mail: <a href="mailto: info@lider-rf.ru" >info@lider-rf.ru</a> 
+		<br />
+		 
+		<br />
+		 
+		<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=ABpTtSWCAW8yoCHp7SFelqrFfUkCyaEC&width=600&height=450">
+		</script>			  
+	</tr>
+</table>
+
+
+<%= render 'smallSlider' %>
+
+<%= render 'footer-box' %>
+
+<%= render 'footer' %>
+

@@ -20,7 +20,7 @@ Izotorg::Application.routes.draw do
   end
 
   resource :static_pages, only: [] do
-    ["index", "about", "articles", "partners", "price", "contacts"].each do |static_page|
+    ["index", "about", "products", "articles", "partners", "price", "contacts"].each do |static_page|
       get static_page
     end
   end
