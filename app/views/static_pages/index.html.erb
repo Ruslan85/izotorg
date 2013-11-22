@@ -1,176 +1,76 @@
-<%= render 'header' %>
+<%= render 'static_pages/shared/header' %>
 
-	 <div id="bigSlider">
-                
-        <div class="jSlider">
-                  <div class="jScrollBanners">
-                    <ul>
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/762/1.jpg" width="982" height="295" alt="1.jpg" />
-                 <div class="jslider-item-title">Материалы от лучших производителей для надежных домов</div>
-                 </li>
-     
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/a57/5.jpg" width="982" height="295" />
-                 <div class="jslider-item-title">Качественная теплоизоляция &mdash; тепло и уют вашего дома!</div>
-                 </li>
-     
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/952/3.jpg" width="982" height="295" />
-                 <div class="jslider-item-title">Профессиональные решения для строительных организаций</div>
-                 </li>
-     
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/eb1/4.jpg" width="982" height="295" />
-                 <div class="jslider-item-title">Индивидуальный подход к каждому клиенту</div>
-                 </li>
-                     </ul>
-                   </div>
-         <div class="prevButton"></div>
- 
-  <div class="nextButton"></div>
-</div>
- 
-                <div class="empty-block"> </div>
- 
-                <script type="text/javascript">
-                        $(".jSlider .jScrollBanners").jCarouselLite({
-                         auto: 9000,
-                         speed: 1400,
-                         scroll: 1,
-                         visible: 1,
-                         width: 982,
-                         height: 295,
-                         btnNext: ".jSlider .nextButton",
-                         btnPrev: ".jSlider .prevButton",
-                        /*beforeStart: function(a) {
-                         $(a).parent().fadeTo(1000, 0);
-                         var bg = $(a).find('img').attr('src');
-                         $('.jSlider .jScrollBanners').css({
-                         backgroundImage: "url("+bg+")"
-                         }, 1000);
-                         },
-                         afterEnd: function(a) {
-                        // $(a).parent().fadeTo(1000, 1);
-                         }
-                        */
-                        });
-                </script>
- 
-        <style>
-                div.jSlider{
-                height:295px;
-                position:relative;
-                width:982px;
-                }
-                .jSlider .prevButton, .jSlider .nextButton{
-                height:50px;
-                width: 50px;
-                position:absolute;
-                top:122px;
-                }
-                .jSlider .prevButton{
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_prev.png) no-repeat center center;
-                left:0px;
-                z-index:2;
-                }
-                .jSlider .nextButton{
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_next.png) no-repeat center center;
-                right:0px;
-                z-index:3;
-                }
-                .jSlider>div{
-                float:left;
-                }
-                .jSlider .jScrollBanners{
-                 border:0px solid #FFF;
-                }
-                .jSlider .jScrollBanners img{
-                margin:0px;
-                width:982px;
-                height:auto;
-                position:absolute;
-                bottom:0px;
-                left:0px;
-                }
-                div.jSlider ul li{
-                overflow-x: hidden;
-                overflow-y: hidden;
-                float: left;
-                text-align:center;
-                position:relative;
-                }
-                div.jSlider ul li div.jslider-item-title{
-                position:absolute;
-                bottom:15px;
-                left:15px;
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_bg.png) bottom left;
-                width:350px;
-                height:50px;
-                padding:16px;
-                color:#2a2a29;
-                font-size:18px;
-                text-align:left;
-                 -webkit-border-radius: 14px;
-                 -moz-border-radius: 14px;
-                 border-radius: 14px;
-                }
-        </style>
-</div>
+<%= render 'static_pages/shared/bigSlider' %>
 
-    <%= render 'quickLinks' %>
-
-</div>
-</div>
-</div>
-	
+<%= render 'static_pages/shared/quickLinks' %>
 
 <div id="container">
 <table id="content" cellpadding="0" cellspacing="0">
 	<tr>
 		
-	<%= render 'left_column' %>
+    	<%= render 'static_pages/shared/left_column' %>
+        
+        <%= render 'static_pages/shared/infoBlock' %>
 
+    	<td class="main-column" >
 
-    <a id="consultant" href="https://siteheart.com/webconsultation/603129?" target="siteheart_sitewindow_603129" onclick="o=window.open;o('https://siteheart.com/webconsultation/603129?', 'siteheart_sitewindow_603129', 'width=550,height=400,top=30,left=30,resizable=yes'); return false;" >On-line   <br /> консультант</a>
-    <a id="feedback" href="/feedback/" >Оформить  <br /> заявку</a> 
+    		<div id="navigation"></div>
+    		<h1 id="pagetitle">О компании</h1> 
+    		<p align="justify"><strong>Торговая Компания &laquo;Лидер&raquo;</strong> - мультибрендовый поставщик систем утепления для зданий и сооружений промышленного и гражданского назначения. Приоритетное направление в сфере поставок - кровельные и изоляционные материалы. Мы сотрудничаем с потребителями всех уровней. Нашими постоянными клиентами являются как крупные промышленные предприятия и компании- застройщики, государственные учреждения, так и небольшие строительные бригады и частные застройщики. </p>
+     
+    		<p align="justify"><hr/></p>
+     
+    		<h1>Преимущества работы с нами</h1>
+     
+    		<table width="100%" border="0" cellpadding="3" cellspacing="0" align="center" style="border-collapse: collapse;"> 
+    		  <tbody> 
+    		    <tr><td width="65" align="center"><img src="http://lider-rf.ru/upload/medialibrary/6ab/1-1.png" border="0" width="65" height="64"  /></td><td>Оперативная доставка материалов в любую точку России</td><td width="65" align="center"><img src="http://lider-rf.ru/upload/medialibrary/a6b/4-1.png" border="0" width="65" height="64"  /></td><td> Гибкая ценовая политика </td></tr>
+    		   
+    		    <tr><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/c20/2-1.png" border="0" width="65" height="64"  /></td><td>Расчет количества материалов</td><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/dd6/5-1.png" border="0" width="65" height="64"  /></td><td> Гарантированное качество продукции </td></tr>
+    		   
+    		    <tr><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/50f/3-1.png" border="0" width="65" height="64"  /></td><td>Индивидуальный подход к каждому клиенту</td><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/7f5/6-1.png" border="0" width="65" height="64"  /></td><td>Профессиональные консультации по любому вопросу</td></tr>
+    		   
+    		    <tr><td colspan="1" align="center"><img src="http://lider-rf.ru/upload/medialibrary/e04/7-1.png" border="0" width="64" height="64"  /></td><td colspan="3"> Профессиональные решения с применением современных строительных материалов и технологий </td></tr>
+    		   </tbody>
+    		</table>
+      		<br />
+    	</td>		
 
-    
-    <%= render 'infoBlock' %>
-
-
-
-
-	<td class="main-column" >
-
-		<div id="navigation"></div>
-		<h1 id="pagetitle">О компании</h1> 
-		<p align="justify"><strong>Торговая Компания &laquo;Лидер&raquo;</strong> - мультибрендовый поставщик систем утепления для зданий и сооружений промышленного и гражданского назначения. Приоритетное направление в сфере поставок - кровельные и изоляционные материалы. Мы сотрудничаем с потребителями всех уровней. Нашими постоянными клиентами являются как крупные промышленные предприятия и компании- застройщики, государственные учреждения, так и небольшие строительные бригады и частные застройщики. </p>
- 
-		<p align="justify"><hr/></p>
- 
-		<h1>Преимущества работы с нами</h1>
- 
-		<table width="100%" border="0" cellpadding="3" cellspacing="0" align="center" style="border-collapse: collapse;"> 
-		  <tbody> 
-		    <tr><td width="65" align="center"><img src="http://lider-rf.ru/upload/medialibrary/6ab/1-1.png" border="0" width="65" height="64"  /></td><td>Оперативная доставка материалов в любую точку России</td><td width="65" align="center"><img src="http://lider-rf.ru/upload/medialibrary/a6b/4-1.png" border="0" width="65" height="64"  /></td><td> Гибкая ценовая политика </td></tr>
-		   
-		    <tr><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/c20/2-1.png" border="0" width="65" height="64"  /></td><td>Расчет количества материалов</td><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/dd6/5-1.png" border="0" width="65" height="64"  /></td><td> Гарантированное качество продукции </td></tr>
-		   
-		    <tr><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/50f/3-1.png" border="0" width="65" height="64"  /></td><td>Индивидуальный подход к каждому клиенту</td><td align="center"><img src="http://lider-rf.ru/upload/medialibrary/7f5/6-1.png" border="0" width="65" height="64"  /></td><td>Профессиональные консультации по любому вопросу</td></tr>
-		   
-		    <tr><td colspan="1" align="center"><img src="http://lider-rf.ru/upload/medialibrary/e04/7-1.png" border="0" width="64" height="64"  /></td><td colspan="3"> Профессиональные решения с применением современных строительных материалов и технологий </td></tr>
-		   </tbody>
-		</table>
-  		<br />
-	</td>
-		
-
-	<%= render 'right_column' %>
-	
+	   <%= render 'static_pages/shared/right_column' %>
 	</tr>
-	</table>
+</table>
 
 		
-	<%= render 'smallSlider' %>
+	<%= render 'static_pages/shared/smallSlider' %>
 
-	<%= render 'footer-box' %>
+    <div class="footer-box">
+        
+        <table style="width:100%;">
+            <tr>
+                <td style="text-align:center;">
+                    <span>Главная</span>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/about-company/">О компании</a>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/products/">Продукция</a>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/article/">Статьи</a>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/partner/">Партнеры</a>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/pry-sheet/">Прайс-лист</a>&nbsp;&nbsp;
+                </td>
+                <td style="text-align:center;">
+                    <a href="/contacts/">Контакты</a>&nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
 
-	<%= render 'footer' %>
+	<%= render 'static_pages/shared/footer' %>
 
