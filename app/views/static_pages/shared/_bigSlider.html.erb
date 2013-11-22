@@ -3,19 +3,19 @@
     <div class="jSlider">
         <div class="jScrollBanners">
             <ul>
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/762/1.jpg" width="982" height="295" alt="1.jpg" />
+                 <li style="width:982px; height:295px"> <%= image_tag '1.jpg' %>
                  <div class="jslider-item-title">Материалы от лучших производителей для надежных домов</div>
                  </li>
      
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/a57/5.jpg" width="982" height="295" />
+                 <li style="width:982px; height:295px"> <%= image_tag '5.jpg' %>
                  <div class="jslider-item-title">Качественная теплоизоляция &mdash; тепло и уют вашего дома!</div>
                  </li>
      
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/952/3.jpg" width="982" height="295" />
+                 <li style="width:982px; height:295px"> <%= image_tag '3.jpg' %>
                  <div class="jslider-item-title">Профессиональные решения для строительных организаций</div>
                  </li>
      
-                 <li style="width:982px; height:295px"> <img src="http://lider-rf.ru/upload/medialibrary/eb1/4.jpg" width="982" height="295" />
+                 <li style="width:982px; height:295px"> <%= image_tag '4.jpg' %>
                  <div class="jslider-item-title">Индивидуальный подход к каждому клиенту</div>
                  </li>
             </ul>
@@ -64,12 +64,12 @@
                 top:122px;
                 }
                 .jSlider .prevButton{
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_prev.png) no-repeat center center;
+                background:url(<%=asset_path "jslider_prev.png"%>) no-repeat center center;
                 left:0px;
                 z-index:2;
                 }
                 .jSlider .nextButton{
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_next.png) no-repeat center center;
+                background:url(<%=asset_path "jslider_next.png"%>) no-repeat center center;
                 right:0px;
                 z-index:3;
                 }
@@ -98,7 +98,7 @@
                 position:absolute;
                 bottom:15px;
                 left:15px;
-                background:url(http://lider-rf.ru/bitrix/templates/lider/images/jslider_bg.png) bottom left;
+                background:url(<%=asset_path "jslider_bg.png"%>) bottom left;
                 width:350px;
                 height:50px;
                 padding:16px;
